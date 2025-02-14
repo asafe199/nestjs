@@ -24,7 +24,7 @@ export class RabbitmqModule {
               transport: Transport.RMQ,
               options: {
                 urls: [process.env['RABBIT_MQ_URL'] as string],
-                name: process.env[`RABBIT_MQ_${name}`],
+                name: name,
               },
             }),
             inject: [ConfigService],
